@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '../utils/api';
 
 const useMatchSchedule = (competitionId) => {
     const [matches, setMatches] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    const fetchMatchSchedule = async () => {
+    const fetchMatchSchedule = async() => {
         try {
             setLoading(true);
-            const response = await axios.get(`http://localhost:5000/api/match-schedule/${competitionId}`);
+            const response = await api.get(`/api/match-schedule/${competitionId}`);
             setMatches(response.data);
             setError(null);
         } catch (err) {
@@ -21,17 +21,17 @@ const useMatchSchedule = (competitionId) => {
     };
 
     useEffect(() => {
-        if(competitionId){
+        if (competitionId) {
             fetchMatchSchedule();
         }
     }, [competitionId]);
 
-    return { 
-        matches, 
-        loading, 
+    return {
+        matches,
+        loading,
         error,
         retry: fetchMatchSchedule
     };
 };
 
-export default useMatchSchedule; 
+export default useMatchSchedule;
