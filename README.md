@@ -38,8 +38,8 @@ iplt20/
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd iplt20
+   git clone https://github.com/skmainwal/iplt20_dashboard.git
+   
    ```
 
 2. **Install dependencies**
