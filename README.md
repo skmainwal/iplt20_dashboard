@@ -85,4 +85,42 @@ Runs only the Node.js backend server.
 - `GET /api/match-schedule` - Get match schedule
 - `GET /api/top-run-scorers` - Get player statistics
 
-=
+## 🚀 Deployment
+
+### Quick Deploy Options
+
+#### Option 1: Render (Recommended)
+1. **Backend**: Deploy to Render Web Service
+   - Build Command: `cd server && npm install`
+   - Start Command: `cd server && npm start`
+   
+2. **Frontend**: Deploy to Render Static Site
+   - Build Command: `npm install && npm run build`
+   - Publish Directory: `build`
+
+#### Option 2: Railway (All-in-One)
+- Deploy both frontend and backend on Railway
+- Auto-detects your services
+- Set environment variables in Railway dashboard
+
+#### Option 3: Vercel + Railway
+- Frontend: Deploy to Vercel
+- Backend: Deploy to Railway
+- Best performance option
+
+### Option 4: Render (All-in-One)
+- Deploy both frontend and backend on Render
+- Automatic SSL certificates
+- Free tier available (750 hours/month)
+- **Cost**: Free tier available, then $7/month
+
+### Environment Variables
+- `REACT_APP_API_URL`: Your backend URL
+- `NODE_ENV`: production
+- `PORT`: 5000 (or platform default)
+
+### Detailed Deployment Guides
+- [DEPLOYMENT.md](./DEPLOYMENT.md) - General deployment guide
+- [RENDER_DEPLOYMENT.md](./RENDER_DEPLOYMENT.md) - Render-specific guide
+
+## 📁 Project Structure
