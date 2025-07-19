@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# IPL T20 Cricket Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A comprehensive cricket application built with React and Node.js that provides real-time cricket data, live scores, match schedules, player statistics, and team standings for IPL T20 tournaments.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+### Core Functionality
+- **Live Score Updates**: Real-time cricket match scores and live updates
+- **Match Schedule**: Complete tournament schedule with match details
+- **Points Table**: Team standings and points summary
+- **Player Statistics**: Top run scorers and player performance metrics
+- **Competition Filtering**: Filter data by season and competition type (Men's/Women's)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Project Structure
+```
+iplt20/
+├── src/                    # React frontend
+│   ├── components/         # Reusable UI components
+│   ├── hooks/             # Custom React hooks
+│   ├── pages/             # Page components
+│   ├── utils/             # Utility functions
+│   └── data/              # Static data files
+├── server/                # Node.js backend
+│   ├── controllers/       # API controllers
+│   ├── routes/           # Express routes
+│   └── utils/            # Server utilities
+└── public/               # Static assets
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn package manager
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd iplt20
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Running the Application
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Option 1: Run Both Frontend and Backend (Recommended)
+```bash
+npm run dev
+```
+This command runs both the React frontend and Node.js backend concurrently.
 
-### `npm run eject`
+#### Option 2: Run Frontend Only
+```bash
+npm start
+```
+Runs only the React development server (requires backend to be running separately).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Option 3: Run Backend Only
+```bash
+npm run server
+```
+Runs only the Node.js backend server.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Access the Application
+- **Frontend**: http://localhost:3000
+- **Backend API**: http://localhost:5000
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Available Routes
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- `/` - Redirects to points table
+- `/points-table` - Team standings and points
+- `/match-schedule` - Tournament match schedule
+- `/top-run-scorers` - Player statistics and rankings
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### API Endpoints
+- `GET /api/competitions` - Get competition data
+- `GET /api/standings` - Get team standings
+- `GET /api/match-schedule` - Get match schedule
+- `GET /api/top-run-scorers` - Get player statistics
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=
